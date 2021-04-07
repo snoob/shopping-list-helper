@@ -1,0 +1,23 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  start:
+    desc: start
+    cmds:
+      - docker-compose up -d --build && symfony server:start -d && symfony run -d yarn dev-server && symfony open:local && symfony server:log
+
+  fixtures:
+    desc: fixtures
+    cmds:
+      - symfony console doctrine:fixtures:load -n --purge-exclusions shopping_list
+
+  stop:
+    desc: stop
+    cmds:
+      - docker-compose stop && symfony server:stop

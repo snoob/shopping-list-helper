@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="input" class="form-group">
+        <label class="control-label">Copy/paste your shopping list into the input textbox area. It will be automatically sorted according to your preference.</label>
+        <div class="form-control" data-controller="sort" data-action="input->sort#handle" contenteditable="true"></div>
+    </div>
+    <div id="output" class="form-group">
+        <label class="control-label">Output</label>
+        <div class="form-control"></div>
+    </div>
+{% endblock %}
