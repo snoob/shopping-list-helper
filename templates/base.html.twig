@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Shopping List Helper</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-dark bg-primary">
+                <h1 class="navbar-brand">Shopping List Helper</h1>
+            </nav>
+            <div class="container mt-3">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
