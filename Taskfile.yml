@@ -2,22 +2,67 @@
 
 version: '3'
 
+vars:
+  PHP_EXEC: 'symfony'
+  SYMFONY_EXEC: '{{.PHP_EXEC}} console'
+
 tasks:
   default:
     cmds:
-      - task --list
+      - 'task --list'
 
   start:
-    desc: start
+    desc: 'Start the project'
     cmds:
-      - docker-compose up -d --build && symfony server:start -d && symfony run -d yarn dev-server && symfony open:local && symfony server:log
-
-  fixtures:
-    desc: fixtures
-    cmds:
-      - symfony console doctrine:fixtures:load -n --purge-exclusions shopping_list
-
+      - 'docker-compose up -d --build'
+      - 'symfony run -d yarn dev-server'  
+      - 'symfony server:start -d'
+      - 'symfony open:local'
+      - 'symfony server:log'
+  
   stop:
-    desc: stop
+    desc: 'Stop the project'
     cmds:
-      - docker-compose stop && symfony server:stop
+      - 'docker-compose stop'
+      - 'symfony server:stop'
+
+  composer:
+    desc: 'Run composer install'
+    cmds:
+      -  '{{.PHP_EXEC}} composer install'
+    sources:
+      - 'composer.lock'
+    generates:
+      - 'vendor/**/*'
+
+  migration:
+    desc: 'Execute migration'
+    cmds:
+      -  '{{.SYMFONY_EXEC}} doctine:migration:migration -n'
+    sources:
+      - 'src/migrations/*.php'
+
+  fixture:
+    desc: 'Load fixtures'
+    cmds:
+      -  '{{.SYMFONY_EXEC}} doctine:fixture:load -n'
+
+  cs-fixer:
+    desc: 'Run php-cs-fixer'
+    cmds:
+      - '{{.PHP_EXEC}} vendor/bin/php-cs-fixer fix --verbose'
+
+  test:
+    desc: 'Run tests'
+    deps: ['composer']
+    cmds:
+      - '{{.PHP_EXEC}} vendor/bin/phpunit --coverage-html coverage'
+
+  phpstan:
+    desc: 'Run PHPStan'
+    cmds:
+      - '{{.PHP_EXEC}} vendor/bin/phpstan --memory-limit=-1 analyse'
+
+  quality:
+    desc: 'Run quality scripts'
+    deps: ['cs-fixer', 'test', 'phpstan']
