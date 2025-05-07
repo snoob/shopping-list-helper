@@ -2,36 +2,21 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BANANE()
- * @method static self CITRON()
- * @method static self FRUIT_DE_LA_PASSION()
- * @method static self KIWI()
- * @method static self MANGUE()
- * @method static self PASTEQUE()
- * @method static self POMME()
- * @method static self POIRE()
- */
-final class FruitEnum extends Enum
+enum FruitEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BANANE = 'banane';
 
-    public const BANANE = 'banane';
+    case CITRON = 'citron';
 
-    public const CITRON = 'citron';
+    case FRUIT_DE_LA_PASSION = 'fruit de la passion';
 
-    public const FRUIT_DE_LA_PASSION = 'fruit de la passion';
+    case KIWI = 'kiwi';
 
-    public const KIWI = 'kiwi';
+    case MANGUE = 'mangue';
 
-    public const MANGUE = 'mangue';
+    case PASTEQUE = 'pasteque';
 
-    public const PASTEQUE = 'pasteque';
+    case POMME = 'pomme';
 
-    public const POMME = 'pomme';
-
-    public const POIRE = 'poire';
+    case POIRE = 'poire';
 }

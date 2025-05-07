@@ -2,27 +2,15 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self COTON_TIGE()
- * @method static self DENTIFRICE()
- * @method static self MOUCHOIR()
- * @method static self SAVON()
- * @method static self SHAMPOING()
- */
-final class SalleDeBainEnum extends Enum
+enum SalleDeBainEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case COTON_TIGE = 'coton tige';
 
-    public const COTON_TIGE = 'coton tige';
+    case DENTIFRICE = 'dentifrice';
 
-    public const DENTIFRICE = 'dentifrice';
+    case MOUCHOIR = 'mouchoir';
 
-    public const MOUCHOIR = 'mouchoir';
+    case SAVON = 'savon';
 
-    public const SAVON = 'savon';
-
-    public const SHAMPOING = 'shampoing';
+    case SHAMPOING = 'shampoing';
 }

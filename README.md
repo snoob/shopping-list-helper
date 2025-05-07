@@ -3,10 +3,9 @@
 ## Requirements
 
 * Docker compose
-* PHP 7.4
+* PHP 8.3
 * Symfony CLI : curl -sS https://get.symfony.com/cli/installer | bash
 * Taskfile = https://taskfile.dev/#/installation
-* Yarn
 
 ## Installation & Run
 

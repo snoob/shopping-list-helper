@@ -1,3 +1,11 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+controllers:
+    resource:
+        path: '../src/Controller/'
+        namespace: 'App\Controller'
+    type: 'attribute'
+
+homepage:
+    path: '/'
+    defaults:
+        _controller: 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction'
+        template: 'homepage.html.twig'

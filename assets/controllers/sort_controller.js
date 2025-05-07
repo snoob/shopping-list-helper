@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Controller } from 'stimulus';
+import { Controller } from '@hotwired/stimulus';
 import { useDebounce } from "stimulus-use";
 
 export default class extends Controller {

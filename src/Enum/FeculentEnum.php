@@ -2,30 +2,17 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self COULIS()
- * @method static self PATE()
- * @method static self PESTO()
- * @method static self RIZ()
- * @method static self TOMATE_CONCASSEE()
- * @method static self SPAGHETTI()
- */
-final class FeculentEnum extends Enum
+enum FeculentEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case COULIS = 'coulis';
 
-    public const COULIS = 'coulis';
+    case PATE = 'pate';
 
-    public const PATE = 'pate';
+    case PESTO = 'pesto';
 
-    public const PESTO = 'pesto';
+    case RIZ = 'riz';
 
-    public const RIZ = 'riz';
+    case TOMATE_CONCASSEE = 'tomate concassee';
 
-    public const TOMATE_CONCASSEE = 'tomate concassee';
-
-    public const SPAGHETTI = 'spaghetti';
+    case SPAGHETTI = 'spaghetti';
 }

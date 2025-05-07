@@ -1,6 +1,6 @@
-@import "~bootswatch/dist/darkly/variables";
-@import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/darkly/bootswatch";
+@import '../../vendor/thomaspark/bootswatch/dist/darkly/variables';
+@import '../../vendor/twbs/bootstrap/scss/bootstrap';
+@import '../../vendor/thomaspark/bootswatch/dist/darkly/bootswatch';
 
 #output {
   display: none;

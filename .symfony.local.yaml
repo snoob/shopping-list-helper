@@ -1,0 +1,13 @@
+http:
+    allow_http: true
+    no_tls: true
+    daemon: true
+
+workers:
+    npm_encore_watch:
+        cmd: [ 'npx', 'encore', 'dev-server' ]
+    sass:
+        cmd: [ 'symfony', 'console', 'sass:build', '--watch' ]
+
+    # auto start Docker compose when starting server (available since Symfony CLI 5.7.0)
+    docker_compose: ~

@@ -2,24 +2,13 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BACON()
- * @method static self BLANC_DE_DINDE()
- * @method static self JAMBON()
- * @method static self LARDON()
- */
-final class CharcuterieEnum extends Enum
+enum CharcuterieEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BACON = 'bacon';
 
-    public const BACON = 'bacon';
+    case BLANC_DE_DINDE = 'blanc de dinde';
 
-    public const BLANC_DE_DINDE = 'blanc de dinde';
+    case JAMBON = 'jambon';
 
-    public const JAMBON = 'jambon';
-
-    public const LARDON = 'lardon';
+    case LARDON = 'lardon';
 }

@@ -2,27 +2,15 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BEURRE()
- * @method static self CREME()
- * @method static self FARINE()
- * @method static self OEUF()
- * @method static self PLANTAFIN()
- */
-final class PatisserieEnum extends Enum
+enum PatisserieEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BEURRE = 'beurre';
 
-    public const BEURRE = 'beurre';
+    case CREME = 'creme';
 
-    public const CREME = 'creme';
+    case FARINE = 'farine';
 
-    public const FARINE = 'farine';
+    case OEUF = 'oeuf';
 
-    public const OEUF = 'oeuf';
-
-    public const PLANTAFIN = 'plantafin';
+    case PLANTAFIN = 'plantafin';
 }

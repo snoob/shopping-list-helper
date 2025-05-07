@@ -4,30 +4,20 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity
- */
+#[ORM\Entity]
 class ShoppingList
 {
-    /**
-     * @ORM\Id
-     * @ORM\Column(type="string", length=64)
-     */
+    #[ORM\Id]
+    #[ORM\Column(type: 'string', length: 64)]
     private string $name;
 
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
+    #[ORM\Column(type: 'datetime_immutable')]
     private \DateTimeImmutable $dateCreated;
 
-    /**
-     * @ORM\Column(type="text")
-     */
+    #[ORM\Column(type: 'text')]
     private string $input;
 
-    /**
-     * @ORM\Column(type="text", nullable=false)
-     */
+    #[ORM\Column(type: 'text', nullable: false)]
     private ?string $output;
 
     public function __construct(string $name)

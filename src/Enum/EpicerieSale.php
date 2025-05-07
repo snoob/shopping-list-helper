@@ -2,30 +2,17 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self CROUTON()
- * @method static self ORIGAN()
- * @method static self PATE_DE_COMPAGNE()
- * @method static self TAPAS()
- * @method static self TORTILLA()
- * @method static self WRAP()
- */
-final class EpicerieSale extends Enum
+enum EpicerieSale: string
 {
-    use AutoDiscoveredValuesTrait;
+    case CROUTON = 'crouton';
 
-    public const CROUTON = 'crouton';
+    case ORIGAN = 'origan';
 
-    public const ORIGAN = 'origan';
+    case PATE_DE_CAMPAGNE = 'pate de campagne';
 
-    public const PATE_DE_CAMPAGNE = 'pate de campagne';
+    case TAPAS = 'tapas';
 
-    public const TAPAS = 'tapas';
+    case TORTILLA = 'tortilla';
 
-    public const TORTILLA = 'tortilla';
-
-    public const WRAP = 'wrap';
+    case WRAP = 'wrap';
 }

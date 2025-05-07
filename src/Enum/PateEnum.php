@@ -2,30 +2,17 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BRISEE()
- * @method static self FEUILLETEE()
- * @method static self FLAMMEKUECHE()
- * @method static self PIZZA()
- * @method static self SABLEE()
- * @method static self SARRAZIN()
- */
-final class PateEnum extends Enum
+enum PateEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BRISEE = 'brisee';
 
-    public const BRISEE = 'brisee';
+    case FEUILLETEE = 'feuilletee';
 
-    public const FEUILLETEE = 'feuilletee';
+    case FLAMMEKUECHE = 'flammekueche';
 
-    public const FLAMMEKUECHE = 'flammekueche';
+    case PIZZA = 'pizza';
 
-    public const PIZZA = 'pizza';
+    case SABLEE = 'sablee';
 
-    public const SABLEE = 'sablee';
-
-    public const SARRAZIN = 'sarrazin';
+    case SARRAZIN = 'sarrazin';
 }

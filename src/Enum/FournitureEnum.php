@@ -2,14 +2,7 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-
-/**
- * @method static self ETIQUETTE()
- **/
-final class FournitureEnum
+enum FournitureEnum: string
 {
-    use AutoDiscoveredValuesTrait;
-
-    public const ETIQUETTE = 'etiquette';
+    case ETIQUETTE = 'etiquette';
 }
