@@ -2,18 +2,9 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BIERE()
- * @method static self VIN()
- */
-final class AlcoolEnum extends Enum
+enum AlcoolEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BIERE = 'biere';
 
-    public const BIERE = 'biere';
-
-    public const VIN = 'vin';
+    case VIN = 'vin';
 }

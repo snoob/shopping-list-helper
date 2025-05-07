@@ -2,42 +2,25 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BLANQUETTE()
- * @method static self CABILLAUD()
- * @method static self CANARD()
- * @method static self CREVETTE()
- * @method static self ESCALOPE()
- * @method static self LAPIN()
- * @method static self SAUCISSE()
- * @method static self SAUMON()
- * @method static self STEAK()
- * @method static self VIANDE_HACHE()
- */
-final class ViandeEnum extends Enum
+enum ViandeEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BLANQUETTE = 'blanquette';
 
-    public const BLANQUETTE = 'blanquette';
+    case CABILLAUD = 'cabillaud';
 
-    public const CABILLAUD = 'cabillaud';
+    case CANARD = 'canard';
 
-    public const CANARD = 'canard';
+    case CREVETTE = 'crevette';
 
-    public const CREVETTE = 'crevette';
+    case ESCALOPE = 'escalope';
 
-    public const ESCALOPE = 'escalope';
+    case LAPIN = 'lapin';
 
-    public const LAPIN = 'lapin';
+    case SAUCISSE = 'saucisse';
 
-    public const SAUCISSE = 'saucisse';
+    case SAUMON = 'saumon';
 
-    public const SAUMON = 'saumon';
+    case STEAK = 'steak';
 
-    public const STEAK = 'steak';
-
-    public const VIANDE_HACHE = 'viande hache';
+    case VIANDE_HACHE = 'viande hache';
 }

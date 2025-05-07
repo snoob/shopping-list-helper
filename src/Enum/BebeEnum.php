@@ -2,30 +2,17 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BEBE()
- * @method static self BLEDICHEF()
- * @method static self BLEDIDEJ()
- * @method static self BLEDILAIT()
- * @method static self BLEDINA()
- * @method static self BLEDINER()
- */
-final class BebeEnum extends Enum
+enum BebeEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BEBE = 'bebe';
 
-    public const BEBE = 'bebe';
+    case BLEDICHEF = 'bledichef';
 
-    public const BLEDICHEF = 'bledichef';
+    case BLEDIDEJ = 'bledidej';
 
-    public const BLEDIDEJ = 'bledidej';
+    case BLEDILAIT = 'bledilait';
 
-    public const BLEDILAIT = 'bledilait';
+    case BLEDINA = 'bledina';
 
-    public const BLEDINA = 'bledina';
-
-    public const BLEDINER = 'blediner';
+    case BLEDINER = 'blediner';
 }

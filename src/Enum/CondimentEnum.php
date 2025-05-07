@@ -2,42 +2,25 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self ALGERIENNE()
- * @method static self BARBECUE()
- * @method static self CORNICHON()
- * @method static self KETCHUP()
- * @method static self MAYONNAISE()
- * @method static self MOUTARDE()
- * @method static self OLIVE()
- * @method static self SEL()
- * @method static self TABASCO()
- * @method static self WORCESTER()
- */
-final class CondimentEnum extends Enum
+enum CondimentEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case ALGERIENNE = 'algerienne';
 
-    public const ALGERIENNE = 'algerienne';
+    case BARBECUE = 'barbecue';
 
-    public const BARBECUE = 'barbecue';
+    case CORNICHON = 'cornichon';
 
-    public const CORNICHON = 'cornichon';
+    case KETCHUP = 'ketchup';
 
-    public const KETCHUP = 'ketchup';
+    case MAYONNAISE = 'mayonnaise';
 
-    public const MAYONNAISE = 'mayonnaise';
+    case MOUTARDE = 'moutarde';
 
-    public const MOUTARDE = 'moutarde';
+    case OLIVE = 'olive';
 
-    public const OLIVE = 'olive';
+    case SEL = 'sel';
 
-    public const SEL = 'sel';
+    case TABASCO = 'tabasco';
 
-    public const TABASCO = 'tabasco';
-
-    public const WORCESTER = 'worcester';
+    case WORCESTER = 'worcester';
 }

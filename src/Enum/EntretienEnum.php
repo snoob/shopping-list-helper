@@ -2,33 +2,19 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self ACIDE_CHLORHYDRIQUE()
- * @method static self CELLOPHANE()
- * @method static self EPONGE()
- * @method static self LESSIVE()
- * @method static self SAC()
- * @method static self VAISSELLE()
- * @method static self VINAIGRE_BLANC()
- */
-final class EntretienEnum extends Enum
+enum EntretienEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case ACIDE_CHLORHYDRIQUE = 'acide chlorhydrique';
 
-    public const ACIDE_CHLORHYDRIQUE = 'acide chlorhydrique';
+    case CELLOPHANE = 'cellophane';
 
-    public const CELLOPHANE = 'cellophane';
+    case EPONGE = 'eponge';
 
-    public const EPONGE = 'eponge';
+    case LESSIVE = 'lessive';
 
-    public const LESSIVE = 'lessive';
+    case SAC = 'sac poubelle';
 
-    public const SAC = 'sac poubelle';
+    case VAISSELLE = 'vaisselle';
 
-    public const VAISSELLE = 'vaisselle';
-
-    public const VINAIGRE_BLANC = 'vinaigre blanc';
+    case VINAIGRE_BLANC = 'vinaigre blanc';
 }

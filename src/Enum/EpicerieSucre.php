@@ -2,36 +2,21 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self CAFE()
- * @method static self CONFITURE()
- * @method static self NUTELLA()
- * @method static self DINAUSORUS()
- * @method static self GATEAU()
- * @method static self TABLETTE()
- * @method static self TARTELETTE()
- * @method static self SAINT_MICHEL()
- */
-final class EpicerieSucre extends Enum
+enum EpicerieSucre: string
 {
-    use AutoDiscoveredValuesTrait;
+    case CAFE = 'cafe';
 
-    public const CAFE = 'cafe';
+    case CONFITURE = 'confiture';
 
-    public const CONFITURE = 'confiture';
+    case DINOSAURUS = 'dinosaurus';
 
-    public const DINOSAURUS = 'dinosaurus';
+    case GATEAU = 'gateau';
 
-    public const GATEAU = 'gateau';
+    case NUTELLA = 'nutella';
 
-    public const NUTELLA = 'nutella';
+    case TABLETTE = 'tablette';
 
-    public const TABLETTE = 'tablette';
+    case TARTELETTE = 'tartelette';
 
-    public const TARTELETTE = 'tartelette';
-
-    public const SAINT_MICHEL = 'saint michel';
+    case SAINT_MICHEL = 'saint michel';
 }

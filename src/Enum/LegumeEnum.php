@@ -2,66 +2,41 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self AIL()
- * @method static self AVOCAT()
- * @method static self AUBERGINE()
- * @method static self BUTTERNUT()
- * @method static self CAROTTE()
- * @method static self CELERI()
- * @method static self CHAMPIGNON()
- * @method static self CONCOMBRE()
- * @method static self COURGETTE()
- * @method static self ECHALOTTE()
- * @method static self EPINARD()
- * @method static self OIGNON()
- * @method static self PATATE_DOUCE()
- * @method static self POIVRON()
- * @method static self POIREAU()
- * @method static self POMME_DE_TERRE()
- * @method static self SALADE()
- * @method static self TOMATE()
- */
-final class LegumeEnum extends Enum
+enum LegumeEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case AIL = 'ail';
 
-    public const AIL = 'ail';
+    case AVOCAT = 'avocat';
 
-    public const AVOCAT = 'avocat';
+    case AUBERGINE = 'aubergine';
 
-    public const AUBERGINE = 'aubergine';
+    case BUTTERNUT = 'butternut';
 
-    public const BUTTERNUT = 'butternut';
+    case CAROTTE = 'carotte';
 
-    public const CAROTTE = 'carotte';
+    case CELERI = 'celeri';
 
-    public const CELERI = 'celeri';
+    case CHAMPIGNON = 'champignon';
 
-    public const CHAMPIGNON = 'champignon';
+    case CONCOMBRE = 'concombre';
 
-    public const CONCOMBRE = 'concombre';
+    case COURGETTE = 'courgette';
 
-    public const COURGETTE = 'courgette';
+    case ECHALOTTE = 'echalotte';
 
-    public const ECHALOTTE = 'echalotte';
+    case EPINARD = 'epinard';
 
-    public const EPINARD = 'epinard';
+    case OIGNON = 'oignon';
 
-    public const OIGNON = 'oignon';
+    case PATATE_DOUCE = 'patate douce';
 
-    public const PATATE_DOUCE = 'patate douce';
+    case POIVRON = 'poivron';
 
-    public const POIVRON = 'poivron';
+    case POIREAU = 'poireau';
 
-    public const POIREAU = 'poireau';
+    case POMME_DE_TERRE = 'pomme de terre';
 
-    public const POMME_DE_TERRE = 'pomme de terre';
+    case SALADE = 'salade';
 
-    public const SALADE = 'salade';
-
-    public const TOMATE = 'tomate';
+    case TOMATE = 'tomate';
 }

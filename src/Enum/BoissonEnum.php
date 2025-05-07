@@ -2,27 +2,15 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self EAU()
- * @method static self HEPAR()
- * @method static self ICE_TEA()
- * @method static self JUS()
- * @method static self VOLVIC()
- */
-final class BoissonEnum extends Enum
+enum BoissonEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case EAU = 'eau';
 
-    public const EAU = 'eau';
+    case HEPAR = 'hepar';
 
-    public const HEPAR = 'hepar';
+    case ICE_TEA = 'ice tea';
 
-    public const ICE_TEA = 'ice tea';
+    case JUS = 'jus';
 
-    public const JUS = 'jus';
-
-    public const VOLVIC = 'volvic';
+    case VOLVIC = 'volvic';
 }

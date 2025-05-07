@@ -2,13 +2,8 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-final class ProductEnum extends Enum
+enum ProductEnum: string
 {
-    use AutoDiscoveredValuesTrait;
-
     public static function getDiscoveredClasses(): array
     {
         return [

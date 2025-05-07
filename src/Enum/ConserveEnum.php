@@ -2,27 +2,15 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self LENTILLE()
- * @method static self PETIT_POID()
- * @method static self RAVIOLI()
- * @method static self THON()
- * @method static self TOMATES_PELEE()
- */
-final class ConserveEnum extends Enum
+enum ConserveEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case PETIT_POID = 'petit poid';
 
-    public const PETIT_POID = 'petit poid';
+    case LENTILLE = 'lentille';
 
-    public const LENTILLE = 'lentille';
+    case RAVIOLI = 'ravioli';
 
-    public const RAVIOLI = 'ravioli';
+    case THON = 'thon';
 
-    public const THON = 'thon';
-
-    public const TOMATES_PELEE = 'tomate pelee';
+    case TOMATES_PELEE = 'tomate pelee';
 }

@@ -2,26 +2,15 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BRIOCHE()
- * @method static self CEREALES()
- * @method static self CREPE()
- * @method static self PAIN()
- */
-final class PetitDejeunerEnum extends Enum
+enum PetitDejeunerEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BRIOCHE = 'brioche';
 
-    public const BRIOCHE = 'brioche';
+    case CEREALES = 'cereales';
 
-    public const CEREALES = 'cereales';
+    case CREPE = 'crepe';
 
-    public const CREPE = 'crepe';
+    case MADELEINE = 'madeleine';
 
-    public const MADELEINE = 'madeleine';
-
-    public const PAIN = 'pain';
+    case PAIN = 'pain';
 }

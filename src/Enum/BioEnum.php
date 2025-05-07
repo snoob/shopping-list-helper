@@ -2,14 +2,7 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-/**
- * @method static self BOUILLON()
-*/
-final class BioEnum extends Enum
+enum BioEnum: string
 {
-    use AutoDiscoveredValuesTrait;
-
-    public const BOUILLON = 'bouillon';
+    case BOUILLON = 'bouillon';
 }

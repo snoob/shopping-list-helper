@@ -2,60 +2,37 @@
 
 namespace App\Enum;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\Enum;
-
-/**
- * @method static self BILLY()
- * @method static self CHEVRE()
- * @method static self COMPOTE()
- * @method static self COMTE()
- * @method static self DANETTE()
- * @method static self EMMENTAL()
- * @method static self FETA()
- * @method static self FICELLO()
- * @method static self FROMAGE()
- * @method static self LAIT()
- * @method static self MOZZA()
- * @method static self PARMESAN()
- * @method static self PETIT_SUISSE()
- * @method static self SAINT_ALBRAY()
- * @method static self SAINT_MORET()
- * @method static self YAOURT()
- */
-final class LaitageEnum extends Enum
+enum LaitageEnum: string
 {
-    use AutoDiscoveredValuesTrait;
+    case BILLY = 'billy';
 
-    public const BILLY = 'billy';
+    case CHEVRE = 'chevre';
 
-    public const CHEVRE = 'chevre';
-
-    public const COMPOTE = 'compote';
+    case COMPOTE = 'compote';
 
     private const COMTE = 'comte';
 
-    public const DANETTE = 'danette';
+    case DANETTE = 'danette';
 
-    public const EMMENTAL = 'emmental';
+    case EMMENTAL = 'emmental';
 
-    public const FICELLO = 'ficello';
+    case FICELLO = 'ficello';
 
-    public const FETA = 'feta';
+    case FETA = 'feta';
 
-    public const FROMAGE = 'fromage';
+    case FROMAGE = 'fromage';
 
-    public const LAIT = 'lait';
+    case LAIT = 'lait';
 
-    public const MOZZA = 'mozza';
+    case MOZZA = 'mozza';
 
-    public const PARMESAN = 'parmesan';
+    case PARMESAN = 'parmesan';
 
-    public const PETITS_SUISSES = 'petit suisse';
+    case PETITS_SUISSES = 'petit suisse';
 
-    public const SAINT_ALBRAY = 'saint albray';
+    case SAINT_ALBRAY = 'saint albray';
 
-    public const SAINT_MORET = 'saint moret';
+    case SAINT_MORET = 'saint moret';
 
-    public const YAOURT = 'yaourt';
+    case YAOURT = 'yaourt';
 }
