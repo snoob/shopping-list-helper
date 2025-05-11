@@ -9,16 +9,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class SortController extends AbstractController
+final class SortController extends AbstractController
 {
-    private SortHandler $sortHandler;
-
-    public function __construct(SortHandler $sortHandler)
+    public function __construct(private readonly SortHandler $sortHandler)
     {
-        $this->sortHandler = $sortHandler;
     }
 
-    #[Route(path: '/sort', name: 'sort', defaults: ['_format' => 'json'])]
+    #[Route(path: '/sort', name: 'sort', defaults: ['_format' => 'json'], methods: [Request::METHOD_POST])]
     public function __invoke(Request $request): Response
     {
         $input = json_decode($request->getContent(), true, 512, JSON_THROW_ON_ERROR)['input'] ?? 'input';
